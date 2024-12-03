@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include "trace.h"
 #define BUF 10
 void logger(int iterazioni) {
+	#ifdef DEBUG
+		TRACE();
+	#endif
 	int i;
 	extern int j;
 	extern int operando1_[BUF];
